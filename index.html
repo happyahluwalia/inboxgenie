@@ -29,7 +29,7 @@
         header {
             background-color: white;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            padding: 1.5rem 0;
+            padding: 2rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
@@ -43,22 +43,22 @@
         
         .header-content {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
+            gap: 1.5rem;
         }
         
         .logo {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
+            text-align: center;
         }
         
         .logo img {
-            height: 40px;
+            height: 120px; /* Larger logo */
+            margin-bottom: 1rem;
         }
         
         .logo h1 {
-            font-size: 1.5rem;
+            font-size: 2rem;
             font-weight: 700;
             color: var(--primary);
         }
@@ -71,178 +71,91 @@
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
+            font-size: 1.1rem;
         }
         
-        .cta-button:hover {
-            background-color: #4338CA;
-            transform: translateY(-2px);
-        }
-        
-        .hero {
-            padding: 5rem 0;
-            text-align: center;
-        }
-        
-        .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--dark);
-        }
-        
-        .hero p {
-            font-size: 1.25rem;
-            color: var(--gray);
-            max-width: 700px;
-            margin: 0 auto 2rem;
-        }
-        
-        .features {
-            padding: 4rem 0;
-            background-color: white;
-        }
-        
-        .features h3 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 3rem;
-            color: var(--dark);
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .feature-card {
-            background-color: var(--light);
-            border-radius: 0.5rem;
-            padding: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-        }
-        
-        .feature-card h4 {
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
-            color: var(--primary);
-        }
-        
-        .demo {
-            padding: 4rem 0;
-            text-align: center;
-        }
-        
-        .demo h3 {
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            color: var(--dark);
-        }
-        
-        .demo-steps {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-        
-        .step {
-            flex: 1;
-            min-width: 250px;
-            max-width: 350px;
-        }
-        
-        .step img {
-            width: 100%;
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            margin-bottom: 1rem;
-        }
-        
-        .step p {
-            color: var(--gray);
-        }
-        
-        .how-it-works {
-            padding: 4rem 0;
-            background-color: white;
-        }
-        
-        .how-it-works h3 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 3rem;
-            color: var(--dark);
-        }
-        
-        .steps {
+        /* Carousel Styles */
+        .carousel {
+            position: relative;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 3rem auto;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
         
-        .step-item {
+        .carousel-inner {
             display: flex;
-            gap: 2rem;
-            margin-bottom: 2rem;
-            align-items: center;
+            transition: transform 0.5s ease;
         }
         
-        .step-number {
-            background-color: var(--primary);
+        .carousel-item {
+            min-width: 100%;
+            padding: 1rem;
+            background: white;
+            text-align: center;
+        }
+        
+        .carousel-item img {
+            max-width: 100%;
+            max-height: 500px;
+            border-radius: 0.25rem;
+            margin-bottom: 1rem;
+            border: 1px solid #eee;
+        }
+        
+        .carousel-caption {
+            padding: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .carousel-control {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.2);
             color: white;
+            border: none;
+            padding: 1rem;
+            cursor: pointer;
+            z-index: 10;
+            border-radius: 50%;
             width: 40px;
             height: 40px;
-            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
-            flex-shrink: 0;
         }
         
-        footer {
-            background-color: var(--dark);
-            color: white;
-            padding: 3rem 0;
-            text-align: center;
+        .carousel-control.prev {
+            left: 1rem;
         }
         
-        .footer-links {
+        .carousel-control.next {
+            right: 1rem;
+        }
+        
+        .carousel-indicators {
             display: flex;
             justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
+            gap: 0.5rem;
+            margin-top: 1rem;
         }
         
-        .footer-links a {
-            color: white;
-            text-decoration: none;
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ccc;
+            cursor: pointer;
         }
         
-        .footer-links a:hover {
-            text-decoration: underline;
+        .indicator.active {
+            background: var(--primary);
         }
         
-        @media (max-width: 768px) {
-            .hero h2 {
-                font-size: 2rem;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
-            }
-            
-            .step-item {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
+        /* Rest of your existing styles... */
     </style>
 </head>
 <body>
@@ -252,9 +165,10 @@
                 <img src="images/inboxgenie.png" alt="InboxGenie Logo">
                 <h1>InboxGenie</h1>
             </div>
-            <a href="https://chrome.google.com/webstore/detail/inboxgenie/[YOUR_EXTENSION_ID]" class="cta-button">Add to Chrome</a>
+            <a href="https://chrome.google.com/webstore/detail/inboxgenie/[YOUR_EXTENSION_ID]" class="cta-button">Add to Chrome - It's Free</a>
         </div>
     </header>
+    
     
     <section class="hero">
         <div class="container">
@@ -287,26 +201,53 @@
     <section class="demo">
         <div class="container">
             <h3>How It Works</h3>
-            <div class="demo-steps">
-                <div class="step">
-                    <img src="images/0.%20GenieWaitingforCommand.png" alt="InboxGenie waiting for command">
-                    <p>1. After installation, the Genie appears in your Gmail ready to assist</p>
+            
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/0.GenieWaitingforCommand.png" alt="Step 1">
+                        <div class="carousel-caption">
+                            <h4>Step 1: Genie Awaits Your Command</h4>
+                            <p>After installation, the InboxGenie appears in your Gmail ready to assist</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/1.OpenAIKey.png" alt="Step 2">
+                        <div class="carousel-caption">
+                            <h4>Step 2: One-Time Setup</h4>
+                            <p>Enter your OpenAI API key to enable the AI magic (only needed once)</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/2.HighSchoolEventsPrompt.png" alt="Step 3">
+                        <div class="carousel-caption">
+                            <h4>Step 3: Find Specific Events</h4>
+                            <p>Ask for events like "Find all high school events" or "Show me flight bookings"</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/3.boysscouts_events.png" alt="Step 4">
+                        <div class="carousel-caption">
+                            <h4>Step 4: Review & Add to Calendar</h4>
+                            <p>Select which events to add with one click</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/4.boyscouts_loadmore.png" alt="Step 5">
+                        <div class="carousel-caption">
+                            <h4>Step 5: Load Older Emails</h4>
+                            <p>Find past events you might have missed</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="step">
-                    <img src="images/1.%20OpenAIKey.png" alt="Enter OpenAI API key">
-                    <p>2. Enter your OpenAI API key once to enable the AI magic</p>
-                </div>
-                <div class="step">
-                    <img src="images/2.%20HighSchoolEventsPrompt.png" alt="Find high school events">
-                    <p>3. Ask for specific events like "Find all high school events"</p>
-                </div>
-                <div class="step">
-                    <img src="images/3.%20boysscouts%20events.png" alt="Boys Scouts events">
-                    <p>4. View and select events to add to your calendar</p>
-                </div>
-                <div class="step">
-                    <img src="images/4.%20boyscouts_loadmore.png" alt="Load more emails">
-                    <p>5. Load older emails to find more past events</p>
+                <button class="carousel-control prev">❮</button>
+                <button class="carousel-control next">❯</button>
+                <div class="carousel-indicators">
+                    <div class="indicator active"></div>
+                    <div class="indicator"></div>
+                    <div class="indicator"></div>
+                    <div class="indicator"></div>
+                    <div class="indicator"></div>
                 </div>
             </div>
         </div>
@@ -358,5 +299,49 @@
             <p>&copy; 2023 InboxGenie. All rights reserved.</p>
         </div>
     </footer>
+<script>
+        // Simple Carousel Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const inner = document.querySelector('.carousel-inner');
+            const items = document.querySelectorAll('.carousel-item');
+            const indicators = document.querySelectorAll('.indicator');
+            let currentIndex = 0;
+            
+            function updateCarousel() {
+                inner.style.transform = `translateX(-${currentIndex * 100}%)`;
+                
+                // Update indicators
+                indicators.forEach((ind, index) => {
+                    ind.classList.toggle('active', index === currentIndex);
+                });
+            }
+            
+            // Next button
+            document.querySelector('.carousel-control.next').addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % items.length;
+                updateCarousel();
+            });
+            
+            // Prev button
+            document.querySelector('.carousel-control.prev').addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + items.length) % items.length;
+                updateCarousel();
+            });
+            
+            // Indicator clicks
+            indicators.forEach((ind, index) => {
+                ind.addEventListener('click', () => {
+                    currentIndex = index;
+                    updateCarousel();
+                });
+            });
+            
+            // Auto-rotate every 5 seconds
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % items.length;
+                updateCarousel();
+            }, 5000);
+        });
+    </script>
 </body>
 </html>
