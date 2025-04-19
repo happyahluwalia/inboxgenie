@@ -1,3 +1,6 @@
+
+<div align="center"> <img src="inboxgenie.png" alt="InboxGenie Logo" width="400" height="400"> </div>
+
 # Privacy Policy for InboxGenie
 
 **1. Data We Process**
