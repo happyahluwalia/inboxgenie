@@ -154,7 +154,515 @@
         .indicator.active {
             background: var(--primary);
         }
+        .cta-button:hover {
+
+
+
+            background-color: #4338CA;
+
+
+            transform: translateY(-2px);
+
+
+        }
+
+
         
+
+
+        .hero {
+
+
+            padding: 5rem 0;
+
+
+            text-align: center;
+
+
+        }
+
+
+        
+
+
+        .hero h2 {
+
+
+            font-size: 2.5rem;
+
+
+            margin-bottom: 1.5rem;
+
+
+            color: var(--dark);
+
+
+        }
+
+
+        
+
+
+        .hero p {
+
+
+            font-size: 1.25rem;
+
+
+            color: var(--gray);
+
+
+            max-width: 700px;
+
+
+            margin: 0 auto 2rem;
+
+
+        }
+
+
+        
+
+
+        .features {
+
+
+            padding: 4rem 0;
+
+
+            background-color: white;
+
+
+        }
+
+
+        
+
+
+        .features h3 {
+
+
+            text-align: center;
+
+
+            font-size: 2rem;
+
+
+            margin-bottom: 3rem;
+
+
+            color: var(--dark);
+
+
+        }
+
+
+        
+
+
+        .features-grid {
+
+
+            display: grid;
+
+
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+
+            gap: 2rem;
+
+
+        }
+
+
+        
+
+
+        .feature-card {
+
+
+            background-color: var(--light);
+
+
+            border-radius: 0.5rem;
+
+
+            padding: 2rem;
+
+
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+
+
+            transition: all 0.3s ease;
+
+
+        }
+
+
+        
+
+
+        .feature-card:hover {
+
+
+            transform: translateY(-5px);
+
+
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+
+
+        }
+
+
+        
+
+
+        .feature-card h4 {
+
+
+            font-size: 1.25rem;
+
+
+            margin-bottom: 1rem;
+
+
+            color: var(--primary);
+
+
+        }
+
+
+        
+
+
+        .demo {
+
+
+            padding: 4rem 0;
+
+
+            text-align: center;
+
+
+        }
+
+
+        
+
+
+        .demo h3 {
+
+
+            font-size: 2rem;
+
+
+            margin-bottom: 2rem;
+
+
+            color: var(--dark);
+
+
+        }
+
+
+        
+
+
+        .demo-steps {
+
+
+            display: flex;
+
+
+            flex-wrap: wrap;
+
+
+            justify-content: center;
+
+
+            gap: 2rem;
+
+
+            margin-bottom: 3rem;
+
+
+        }
+
+
+        
+
+
+        .step {
+
+
+            flex: 1;
+
+
+            min-width: 250px;
+
+
+            max-width: 350px;
+
+
+        }
+
+
+        
+
+
+        .step img {
+
+
+            width: 100%;
+
+
+            border-radius: 0.5rem;
+
+
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+
+            margin-bottom: 1rem;
+
+
+        }
+
+
+        
+
+
+        .step p {
+
+
+            color: var(--gray);
+
+
+        }
+
+
+        
+
+
+        .how-it-works {
+
+
+            padding: 4rem 0;
+
+
+            background-color: white;
+
+
+        }
+
+
+        
+
+
+        .how-it-works h3 {
+
+
+            text-align: center;
+
+
+            font-size: 2rem;
+
+
+            margin-bottom: 3rem;
+
+
+            color: var(--dark);
+
+
+        }
+
+
+        
+
+
+        .steps {
+
+
+            max-width: 800px;
+
+
+            margin: 0 auto;
+
+
+        }
+
+
+        
+
+
+        .step-item {
+
+
+            display: flex;
+
+
+            gap: 2rem;
+
+
+            margin-bottom: 2rem;
+
+
+            align-items: center;
+
+
+        }
+
+
+        
+
+
+        .step-number {
+
+
+            background-color: var(--primary);
+
+
+            color: white;
+
+
+            width: 40px;
+
+
+            height: 40px;
+
+
+            border-radius: 50%;
+
+
+            display: flex;
+
+
+            align-items: center;
+
+
+            justify-content: center;
+
+
+            font-weight: bold;
+
+
+            flex-shrink: 0;
+
+
+        }
+
+
+        
+
+
+        footer {
+
+
+            background-color: var(--dark);
+
+
+            color: white;
+
+
+            padding: 3rem 0;
+
+
+            text-align: center;
+
+
+        }
+
+
+        
+
+
+        .footer-links {
+
+
+            display: flex;
+
+
+            justify-content: center;
+
+
+            gap: 2rem;
+
+
+            margin-bottom: 2rem;
+
+
+        }
+
+
+        
+
+
+        .footer-links a {
+
+
+            color: white;
+
+
+            text-decoration: none;
+
+
+        }
+
+
+        
+
+
+        .footer-links a:hover {
+
+
+            text-decoration: underline;
+
+
+        }
+
+
+        
+
+
+        @media (max-width: 768px) {
+
+
+            .hero h2 {
+
+
+                font-size: 2rem;
+
+
+            }
+
+
+            
+
+
+            .hero p {
+
+
+                font-size: 1.1rem;
+
+
+            }
+
+
+            
+
+
+            .step-item {
+
+
+                flex-direction: column;
+
+
+                text-align: center;
+
+
+            }
+
+
+        }
         /* Rest of your existing styles... */
     </style>
 </head>
@@ -296,7 +804,7 @@
                 <a href="#">Terms of Service</a>
                 <a href="#">Contact Us</a>
             </div>
-            <p>&copy; 2023 InboxGenie. All rights reserved.</p>
+            <p>&copy; 2025 InboxGenie. All rights reserved.</p>
         </div>
     </footer>
 <script>
